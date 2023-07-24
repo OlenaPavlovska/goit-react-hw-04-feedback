@@ -1,0 +1,9 @@
+.statisticList {
+    background-color: rgb(255, 123, 0);
+    width: 330px;
+    color: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
