@@ -1,11 +1,10 @@
  import css from './statistic.module.css'
 import PropTypes from 'prop-types'
-import { Component } from "react";
+import React from "react";
 
-  export class Statistics extends Component{
-    render() {
-        const { good, neutral, bad, total, positivePercentage } = this.props;
-        return (
+
+export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+   return (
             <div className={css.statisticList}>
                 <p>Good:  {good}</p>
                 <p>Neutral:  { neutral}</p>
@@ -13,8 +12,7 @@ import { Component } from "react";
                 <p>Total:  { total}</p>
                 <p>PositivePercentage:  { positivePercentage}%</p>
             </div>
-        )
-    }
+        ) 
 }
 
 Statistics.propTypes = {
