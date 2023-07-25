@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FeedbackOptions } from './feedbackOptions/feedbackOptions';
-import { Statistics } from './statistic/statistic';
+import  Statistics  from './statistic/statistic';
 import { Section } from './sectionTitle/sectionTitle';
 
 
@@ -10,7 +10,7 @@ export const App = () => {
   const [bad, setBad] = useState(0)
 
   const onLeaveFeedback = e => {
-    switch (e) {
+    switch (e.target.name) {
       case 'good':
         setGood(prevState => prevState + 1)
         break;
@@ -24,15 +24,18 @@ export const App = () => {
         return;
       
     }
+    
     }
 
-   const countTotalFeedback = () => {
-   return good + neutral + bad;
-  }
+   const countTotalFeedback =  good + neutral + bad;
+  
+
+
   
 const countPositiveFeedbackPercentage = () => {
-    return Math.round((good / countTotalFeedback()) * 100) || 0;
+    return Math.round((good / countTotalFeedback) * 100) || 0;
   }
+ 
 
    return (
       <div>
